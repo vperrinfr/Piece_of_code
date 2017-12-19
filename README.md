@@ -1,4 +1,4 @@
-# MyIBMCloud_Functions
+# My IBM Cloud Functions for Watson Conversation
 
 A repository to store my IBM Cloud Functions
 
