@@ -23,7 +23,7 @@ function main(params) {
      text: input,
      features: {
       entities: {
-        model: "20:94b1b2e0-0122-4bd3-b9db-af4f4597eb56"
+        model: model
       }
     }
         
