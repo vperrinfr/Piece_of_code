@@ -28,15 +28,13 @@ var options = {
 var promise = request(options)
 .then(function (body) {
 
-	var auth = "Bearer " + body.token;
+  var auth = "Bearer " + body.token;
   var options2 = { method: 'POST',
   url: 'https://ibm-watson-ml.mybluemix.net/v3/wml_instances/XXXXXXXXXXXXXXXXXXXXX/published_models/XXXXXXXXXXXXXXXXXXXXX/deployments/XXXXXXXXXXXXXXXXXXXXX/online',
-  headers: 
-   { 
-     authorization: auth },
+  headers: { authorization: auth },
   body: info };
 
-	    return options2
+	return options2
 	})
 .then(function (response) {
         return request(response);
@@ -45,7 +43,7 @@ var promise = request(options)
         return JSON.parse(response_final);
     })
     .catch(function (err) {
-		console.log(err);
+	console.log(err);
     });
 
 return promise;  
