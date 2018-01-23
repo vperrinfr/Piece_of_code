@@ -9,7 +9,7 @@ Based on Apache OpenWhisk, IBM Cloud Functions is a polyglot functions-as-a-serv
 ## List of my Functions
 
   * Watson Discovery Passages Retrieval => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/WDS.js)
-  * Watson Natural Language Understanding => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/Watson_NLU)
+  * Watson Natural Language Understanding => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/Watson_NLU.js)
   * Watson Machine Learning => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/WML.js)
 
 
