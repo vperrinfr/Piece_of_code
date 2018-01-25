@@ -12,4 +12,6 @@ Based on Apache OpenWhisk, IBM Cloud Functions is a polyglot functions-as-a-serv
   * Watson Natural Language Understanding => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/Watson_NLU.js)
   * Watson Machine Learning => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/WML.js)
 
+## Additionnal piece of codes
 
+* WCS Worskpace for WML => [here](https://github.com/vperrinfr/MyIBMCloud_Functions/blob/master/workspace_wml.json)
