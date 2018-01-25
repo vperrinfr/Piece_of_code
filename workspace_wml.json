@@ -1,5 +1,5 @@
 {
-	"name": "WML",
+	"name": "Watson Machine Learning",
 	"created": "2018-01-22T13:29:26.910Z",
 	"intents": [{
 		"intent": "search",
@@ -12,7 +12,7 @@
 		}],
 		"description": ""
 	}],
-	"updated": "2018-01-23T16:37:34.841Z",
+	"updated": "2018-01-25T10:57:50.512Z",
 	"entities": [{
 		"entity": "marital",
 		"values": [{
@@ -48,19 +48,19 @@
 			"type": "synonyms",
 			"value": "F",
 			"created": "2018-01-23T13:06:57.387Z",
-			"updated": "2018-01-23T13:07:32.705Z",
+			"updated": "2018-01-25T10:23:40.217Z",
 			"metadata": null,
-			"synonyms": ["Féminin", "Femme", "Femelle"]
+			"synonyms": ["woman", "female"]
 		}, {
 			"type": "synonyms",
 			"value": "M",
 			"created": "2018-01-23T13:06:53.618Z",
-			"updated": "2018-01-23T13:07:18.470Z",
+			"updated": "2018-01-25T10:23:49.176Z",
 			"metadata": null,
-			"synonyms": ["Masculin", "Homme", "Male"]
+			"synonyms": ["man", "male"]
 		}],
 		"created": "2018-01-23T13:06:50.492Z",
-		"updated": "2018-01-23T13:07:40.900Z",
+		"updated": "2018-01-25T10:23:49.176Z",
 		"metadata": null,
 		"description": null
 	}, {
@@ -367,9 +367,9 @@
 			"type": "server",
 			"parameters": {
 				"age": "$number",
-				"gender": "$Genre",
+				"gender": "$genre",
 				"marital": "$marital",
-				"profession": "$Profession"
+				"profession": "$profession"
 			},
 			"credentials": "$private.function_credentials",
 			"result_variable": "context.extraction"
@@ -383,7 +383,7 @@
 			}
 		},
 		"created": "2018-01-23T13:34:48.839Z",
-		"updated": "2018-01-23T13:59:12.643Z",
+		"updated": "2018-01-25T10:57:50.512Z",
 		"metadata": {
 			"fallback": "leave"
 		},
