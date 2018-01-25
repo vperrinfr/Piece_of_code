@@ -1,0 +1,455 @@
+{
+	"name": "WML",
+	"created": "2018-01-22T13:29:26.910Z",
+	"intents": [{
+		"intent": "search",
+		"created": "2018-01-23T13:05:32.757Z",
+		"updated": "2018-01-23T13:32:07.680Z",
+		"examples": [{
+			"text": "looking for the right product for me...",
+			"created": "2018-01-23T13:32:07.680Z",
+			"updated": "2018-01-23T13:32:07.680Z"
+		}],
+		"description": ""
+	}],
+	"updated": "2018-01-23T16:37:34.841Z",
+	"entities": [{
+		"entity": "marital",
+		"values": [{
+			"type": "synonyms",
+			"value": "Married",
+			"created": "2018-01-23T13:09:29.680Z",
+			"updated": "2018-01-23T13:09:29.680Z",
+			"metadata": null,
+			"synonyms": ["marié"]
+		}, {
+			"type": "synonyms",
+			"value": "Single",
+			"created": "2018-01-23T13:11:13.697Z",
+			"updated": "2018-01-23T13:11:13.697Z",
+			"metadata": null,
+			"synonyms": ["célibataire"]
+		}, {
+			"type": "synonyms",
+			"value": "Unspecified",
+			"created": "2018-01-23T13:11:33.307Z",
+			"updated": "2018-01-23T13:11:33.307Z",
+			"metadata": null,
+			"synonyms": []
+		}],
+		"created": "2018-01-23T13:08:05.835Z",
+		"updated": "2018-01-23T13:11:33.307Z",
+		"metadata": null,
+		"description": null,
+		"fuzzy_match": false
+	}, {
+		"entity": "Genre",
+		"values": [{
+			"type": "synonyms",
+			"value": "F",
+			"created": "2018-01-23T13:06:57.387Z",
+			"updated": "2018-01-23T13:07:32.705Z",
+			"metadata": null,
+			"synonyms": ["Féminin", "Femme", "Femelle"]
+		}, {
+			"type": "synonyms",
+			"value": "M",
+			"created": "2018-01-23T13:06:53.618Z",
+			"updated": "2018-01-23T13:07:18.470Z",
+			"metadata": null,
+			"synonyms": ["Masculin", "Homme", "Male"]
+		}],
+		"created": "2018-01-23T13:06:50.492Z",
+		"updated": "2018-01-23T13:07:40.900Z",
+		"metadata": null,
+		"description": null
+	}, {
+		"entity": "Profession",
+		"values": [{
+			"type": "synonyms",
+			"value": "Sales",
+			"created": "2018-01-23T13:15:18.890Z",
+			"updated": "2018-01-23T13:15:18.890Z",
+			"metadata": null,
+			"synonyms": ["commercial"]
+		}, {
+			"type": "synonyms",
+			"value": "Executive",
+			"created": "2018-01-23T13:15:03.318Z",
+			"updated": "2018-01-23T13:15:03.318Z",
+			"metadata": null,
+			"synonyms": []
+		}, {
+			"type": "synonyms",
+			"value": "Retail",
+			"created": "2018-01-23T13:14:55.967Z",
+			"updated": "2018-01-23T13:14:55.967Z",
+			"metadata": null,
+			"synonyms": []
+		}, {
+			"type": "synonyms",
+			"value": "Retired",
+			"created": "2018-01-23T13:26:47.169Z",
+			"updated": "2018-01-23T13:26:47.169Z",
+			"metadata": null,
+			"synonyms": ["retraité"]
+		}, {
+			"type": "synonyms",
+			"value": "Student",
+			"created": "2018-01-23T13:27:13.894Z",
+			"updated": "2018-01-23T13:27:13.894Z",
+			"metadata": null,
+			"synonyms": ["Etudiant"]
+		}],
+		"created": "2018-01-23T13:14:51.626Z",
+		"updated": "2018-01-23T13:27:13.894Z",
+		"metadata": null,
+		"description": null,
+		"fuzzy_match": false
+	}, {
+		"entity": "sys-number",
+		"values": [],
+		"created": "2018-01-23T13:35:44.832Z",
+		"updated": "2018-01-23T13:35:44.832Z",
+		"metadata": null,
+		"description": null
+	}],
+	"language": "en",
+	"metadata": {
+		"api_version": {
+			"major_version": "v1",
+			"minor_version": "2017-05-26"
+		}
+	},
+	"description": "",
+	"dialog_nodes": [{
+		"type": "event_handler",
+		"title": null,
+		"output": {
+			"text": "How old are you ?"
+		},
+		"parent": "slot_13_1516714532144",
+		"context": null,
+		"created": "2018-01-23T13:35:33.279Z",
+		"updated": "2018-01-23T13:37:26.596Z",
+		"metadata": null,
+		"next_step": null,
+		"conditions": null,
+		"event_name": "focus",
+		"description": null,
+		"dialog_node": "handler_15_1516714532144",
+		"previous_sibling": "handler_14_1516714532144"
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {},
+		"parent": "slot_13_1516714532144",
+		"context": {
+			"number": "@sys-number"
+		},
+		"created": "2018-01-23T13:35:32.652Z",
+		"updated": "2018-01-23T13:41:56.606Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "@sys-number",
+		"event_name": "input",
+		"description": null,
+		"dialog_node": "handler_14_1516714532144",
+		"previous_sibling": null
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {
+			"text": "Don't understand your gender."
+		},
+		"parent": "slot_4_1516714499764",
+		"context": null,
+		"created": "2018-01-23T13:35:00.938Z",
+		"updated": "2018-01-23T13:52:38.289Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": null,
+		"event_name": "focus",
+		"description": null,
+		"dialog_node": "handler_6_1516714499764",
+		"previous_sibling": "handler_5_1516714499764"
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {},
+		"parent": "slot_4_1516714499764",
+		"context": {
+			"genre": "@Genre"
+		},
+		"created": "2018-01-23T13:35:00.608Z",
+		"updated": "2018-01-23T13:56:10.144Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "@Genre",
+		"event_name": "input",
+		"description": null,
+		"dialog_node": "handler_5_1516714499764",
+		"previous_sibling": null
+	}, {
+		"type": "slot",
+		"title": null,
+		"output": {},
+		"parent": "node_2_1516714488631",
+		"context": null,
+		"created": "2018-01-23T13:35:06.996Z",
+		"updated": "2018-01-23T13:56:07.839Z",
+		"metadata": {},
+		"variable": "$profession",
+		"next_step": null,
+		"conditions": null,
+		"description": null,
+		"dialog_node": "slot_7_1516714506654",
+		"previous_sibling": "node_16_1516714669925"
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {
+			"text": {
+				"values": ["Of course, I need additional informations to better serve you... I need your gender, age, marital status and profession..."],
+				"selection_policy": "sequential"
+			}
+		},
+		"parent": "node_2_1516714488631",
+		"context": null,
+		"created": "2018-01-23T13:35:00.000Z",
+		"updated": "2018-01-23T13:54:58.902Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": null,
+		"event_name": "focus",
+		"description": null,
+		"dialog_node": "handler_3_1516714499750",
+		"previous_sibling": "slot_13_1516714532144"
+	}, {
+		"type": "slot",
+		"title": null,
+		"output": {},
+		"parent": "node_2_1516714488631",
+		"context": null,
+		"created": "2018-01-23T13:35:27.874Z",
+		"updated": "2018-01-23T13:42:09.914Z",
+		"metadata": {},
+		"variable": "$marital",
+		"next_step": null,
+		"conditions": null,
+		"description": null,
+		"dialog_node": "slot_10_1516714527259",
+		"previous_sibling": "slot_4_1516714499764"
+	}, {
+		"type": "slot",
+		"title": null,
+		"output": {},
+		"parent": "node_2_1516714488631",
+		"context": null,
+		"created": "2018-01-23T13:35:32.354Z",
+		"updated": "2018-01-23T13:41:56.210Z",
+		"metadata": {},
+		"variable": "$number",
+		"next_step": null,
+		"conditions": null,
+		"description": null,
+		"dialog_node": "slot_13_1516714532144",
+		"previous_sibling": "slot_10_1516714527259"
+	}, {
+		"type": "slot",
+		"title": null,
+		"output": {},
+		"parent": "node_2_1516714488631",
+		"context": null,
+		"created": "2018-01-23T13:35:00.300Z",
+		"updated": "2018-01-23T13:56:09.846Z",
+		"metadata": {},
+		"variable": "$genre",
+		"next_step": null,
+		"conditions": null,
+		"description": null,
+		"dialog_node": "slot_4_1516714499764",
+		"previous_sibling": "slot_7_1516714506654"
+	}, {
+		"type": "standard",
+		"title": null,
+		"output": {
+			"text": {
+				"values": ["Based on your profil, I would say: <? $extraction.values[0][8] ?>"],
+				"selection_policy": "sequential"
+			}
+		},
+		"parent": "node_2_1516714488631",
+		"context": null,
+		"created": "2018-01-23T13:37:50.149Z",
+		"updated": "2018-01-23T16:31:15.528Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "node_16_1516714669925",
+		"previous_sibling": null
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {
+			"text": "Are you single or married"
+		},
+		"parent": "slot_10_1516714527259",
+		"context": null,
+		"created": "2018-01-23T13:35:29.080Z",
+		"updated": "2018-01-23T13:37:02.559Z",
+		"metadata": null,
+		"next_step": null,
+		"conditions": null,
+		"event_name": "focus",
+		"description": null,
+		"dialog_node": "handler_12_1516714527259",
+		"previous_sibling": "handler_11_1516714527259"
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {},
+		"parent": "slot_10_1516714527259",
+		"context": {
+			"marital": "@marital"
+		},
+		"created": "2018-01-23T13:35:28.506Z",
+		"updated": "2018-01-23T13:42:10.221Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "@marital",
+		"event_name": "input",
+		"description": null,
+		"dialog_node": "handler_11_1516714527259",
+		"previous_sibling": null
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {
+			"text": "What do you do to live?"
+		},
+		"parent": "slot_7_1516714506654",
+		"context": null,
+		"created": "2018-01-23T13:35:08.319Z",
+		"updated": "2018-01-23T16:37:34.841Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": null,
+		"event_name": "focus",
+		"description": null,
+		"dialog_node": "handler_9_1516714506654",
+		"previous_sibling": "handler_8_1516714506654"
+	}, {
+		"type": "event_handler",
+		"title": null,
+		"output": {},
+		"parent": "slot_7_1516714506654",
+		"context": {
+			"profession": "@Profession"
+		},
+		"created": "2018-01-23T13:35:07.747Z",
+		"updated": "2018-01-23T13:56:08.392Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "@Profession",
+		"event_name": "input",
+		"description": null,
+		"dialog_node": "handler_8_1516714506654",
+		"previous_sibling": null
+	}, {
+		"type": "frame",
+		"title": "Search",
+		"output": {},
+		"parent": null,
+		"actions": [{
+			"name": "/vincent.perrin@fr.ibm.com_dev/vperrin/WML_Promise",
+			"type": "server",
+			"parameters": {
+				"age": "$number",
+				"gender": "$Genre",
+				"marital": "$marital",
+				"profession": "$Profession"
+			},
+			"credentials": "$private.function_credentials",
+			"result_variable": "context.extraction"
+		}],
+		"context": {
+			"private": {
+				"function_credentials": {
+					"user": "bac313a1-fd00-4cc9-9e26-524963f6dc37",
+					"password": "SoJtpSuhjdIiP63LqWRoTE4Yxf92bxkjpto7TYFRRgVC9H5I1agI3aMdhOCrvHKY"
+				}
+			}
+		},
+		"created": "2018-01-23T13:34:48.839Z",
+		"updated": "2018-01-23T13:59:12.643Z",
+		"metadata": {
+			"fallback": "leave"
+		},
+		"next_step": {
+			"behavior": "jump_to",
+			"selector": "condition",
+			"dialog_node": "node_16_1516714669925"
+		},
+		"conditions": "#search",
+		"digress_in": "does_not_return",
+		"description": null,
+		"dialog_node": "node_2_1516714488631",
+		"digress_out": "allow_all",
+		"previous_sibling": "Welcome",
+		"digress_out_slots": "not_allowed"
+	}, {
+		"type": "standard",
+		"title": "Anything else",
+		"output": {
+			"text": {
+				"values": ["Don't answer your sentence..."],
+				"selection_policy": "sequential"
+			}
+		},
+		"parent": null,
+		"actions": [{
+			"name": "MyWeatherFunction",
+			"type": "client",
+			"parameters": {
+				"date": "$date",
+				"location": "$location"
+			},
+			"result_variable": "context.my_forecast"
+		}],
+		"context": {
+			"skip_user_input": true
+		},
+		"created": "2018-01-22T14:06:21.526Z",
+		"updated": "2018-01-23T13:36:26.168Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "anything_else",
+		"description": null,
+		"dialog_node": "Anything else",
+		"previous_sibling": "node_2_1516714488631"
+	}, {
+		"type": "standard",
+		"title": "Welcome",
+		"output": {
+			"text": {
+				"values": ["Hello. How can I help you?"],
+				"selection_policy": "sequential"
+			}
+		},
+		"parent": null,
+		"context": null,
+		"created": "2018-01-22T14:06:21.526Z",
+		"updated": "2018-01-23T14:49:23.217Z",
+		"metadata": {},
+		"next_step": null,
+		"conditions": "welcome",
+		"description": null,
+		"dialog_node": "Welcome",
+		"previous_sibling": null
+	}],
+	"workspace_id": "cae3a623-ab86-4e2b-bf52-40c4b92b730c",
+	"counterexamples": [],
+	"learning_opt_out": false
+}
