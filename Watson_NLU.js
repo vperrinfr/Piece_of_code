@@ -5,9 +5,11 @@
   * @param user => Watson NLU user
   * @param password => Watson NLU Password
   * @param input => User Text input
-  * @param model => custom model id
+  *
   * @return The output of this action, which must be a JSON object.
   *
+  * 
+  * 
   * 
 */
 function main(params) {
@@ -15,7 +17,7 @@ function main(params) {
     var input = params.input || "Hello";
     var username = params.user;
     var password = params.password;
-    var url = 'https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze';
+    var url = 'https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze' || params.url;
     var model = params.model || null;
     
     var qs = 
@@ -25,8 +27,7 @@ function main(params) {
       entities: {
         model: model
       }
-    }
-        
+    }  
     };
 
     
