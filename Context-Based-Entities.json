@@ -1,0 +1,1238 @@
+{
+  "name": "Intent-Based Entities",
+  "intents": [
+    {
+      "intent": "order_pizza",
+      "examples": [
+        {
+          "text": "I want a magharita but I'm allergic to mushrooms, so I would prefer sausage.",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                9,
+                18
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                39,
+                48
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                68,
+                75
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I don't want ham in my pizza",
+          "mentions": [
+            {
+              "entity": "without_topping",
+              "location": [
+                13,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want a pizza with cheese",
+          "mentions": [
+            {
+              "entity": "toppings",
+              "location": [
+                20,
+                26
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want a pizza without cheese",
+          "mentions": [
+            {
+              "entity": "without_topping",
+              "location": [
+                23,
+                29
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to order a large pizza",
+          "mentions": [
+            {
+              "entity": "pizza_size",
+              "location": [
+                18,
+                23
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like to eat a pepperoni pizza with mushrooms",
+          "mentions": [
+            {
+              "entity": "toppings",
+              "location": [
+                43,
+                52
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like to order a Quattro Formaggi",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                24,
+                40
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can I get a pizza margherita, small please",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                18,
+                28
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want a pizza with olives and cheese",
+          "mentions": [
+            {
+              "entity": "toppings",
+              "location": [
+                20,
+                26
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                31,
+                37
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'd like a pizza but I'm allergic to cheese",
+          "mentions": [
+            {
+              "entity": "without_topping",
+              "location": [
+                37,
+                43
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like a Greek pizza but I don't like onion",
+          "mentions": [
+            {
+              "entity": "without_topping",
+              "location": [
+                44,
+                49
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can I have a small Greek pizza with additional olives",
+          "mentions": [
+            {
+              "entity": "pizza_size",
+              "location": [
+                13,
+                18
+              ]
+            },
+            {
+              "entity": "type_pizza",
+              "location": [
+                19,
+                24
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                47,
+                53
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like a Greek pizza with olivies but I don't like ham",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                15,
+                20
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                32,
+                39
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                57,
+                60
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I like greek Pizza but I don't like cheese and ham. I would prefer mushrooms and olives.",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                7,
+                12
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                36,
+                42
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                47,
+                50
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                67,
+                76
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                81,
+                87
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I like Pizza but I don't want green pepper and tomatoes. I would like mushrooms and olives.",
+          "mentions": [
+            {
+              "entity": "without_topping",
+              "location": [
+                30,
+                42
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                47,
+                55
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                70,
+                79
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                84,
+                90
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like to order a greek pizza with ham",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                24,
+                29
+              ]
+            },
+            {
+              "entity": "toppings",
+              "location": [
+                41,
+                44
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like to take a Pepperoni pizza without onions",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                23,
+                32
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                47,
+                53
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want a magharita but I'm allergic to mushrooms",
+          "mentions": [
+            {
+              "entity": "type_pizza",
+              "location": [
+                9,
+                18
+              ]
+            },
+            {
+              "entity": "without_topping",
+              "location": [
+                39,
+                48
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'd like a pizza"
+        },
+        {
+          "text": "Can I have a pizza, regular with additional onions",
+          "mentions": [
+            {
+              "entity": "toppings",
+              "location": [
+                44,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I am hungry and I love formaggi",
+          "mentions": [
+            {
+              "entity": "toppings",
+              "location": [
+                23,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'd like a pizza, but without olives",
+          "mentions": [
+            {
+              "entity": "without_topping",
+              "location": [
+                30,
+                36
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "Intent to detect the wish to order a pizza"
+    },
+    {
+      "intent": "travel",
+      "examples": [
+        {
+          "text": "I need a train ticket to go to Milan",
+          "mentions": [
+            {
+              "entity": "city_to",
+              "location": [
+                31,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to book a flight from Tokyo to San Francisco",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                29,
+                34
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                38,
+                51
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I would like to travel from Paris to Tokyo",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                28,
+                33
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                37,
+                42
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My family lives in Lille and I have to visit them in Strasbourg",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                19,
+                24
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                53,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I need a flight ticket from LAX to Paris",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                28,
+                31
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                35,
+                40
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I need a ticket from Paris to New York",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                21,
+                26
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                30,
+                38
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can I buy a ticket on the bus to Nantes ?",
+          "mentions": [
+            {
+              "entity": "city_to",
+              "location": [
+                33,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Is it possible to go to Marseille from Strasbourg ?",
+          "mentions": [
+            {
+              "entity": "city_to",
+              "location": [
+                24,
+                33
+              ]
+            },
+            {
+              "entity": "city_from",
+              "location": [
+                39,
+                49
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Tom bought a ticket to Boston",
+          "mentions": [
+            {
+              "entity": "city_to",
+              "location": [
+                23,
+                29
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Tom comes from Washington",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                15,
+                25
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Julie comes from Syracuse",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                17,
+                25
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I will take the plane from Nice to Bordeaux",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                27,
+                31
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                35,
+                43
+              ]
+            }
+          ]
+        },
+        {
+          "text": "He lives in Lille",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                12,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I live to Saint Dié and I have to drive to Paris",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                10,
+                19
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                43,
+                48
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can I buy a ticket on the bus to Colmar ?",
+          "mentions": [
+            {
+              "entity": "city_to",
+              "location": [
+                33,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to go to Moscow knowing I live in Paris",
+          "mentions": [
+            {
+              "entity": "city_to",
+              "location": [
+                16,
+                22
+              ]
+            },
+            {
+              "entity": "city_from",
+              "location": [
+                41,
+                46
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I like in Paris, and I want to travel to Bordeaux",
+          "mentions": [
+            {
+              "entity": "city_from",
+              "location": [
+                10,
+                15
+              ]
+            },
+            {
+              "entity": "city_to",
+              "location": [
+                41,
+                49
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "Intent to understand Travel request"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "type_pizza",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Margherita",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "magharita",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Quattro Formaggi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hawaiian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Greek",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pepperoni",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Neapolitan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Marinara",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Calzone",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "city_to",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Moscow",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paris",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bordeaux",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tokyo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Milan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "San Francisco",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Strasbourg",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lille",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "New York",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Marseille",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nantes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Colmar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Boston",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Saint Dié",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "without_topping",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cheese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ham",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "onion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mushrooms",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "onions",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "tomatoes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "green pepper",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "city_from",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Lille",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tokyo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paris",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "LAX",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Strasbourg",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Washington",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Syracuse",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nice",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Saint Dié",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "pizza_size",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "large",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "small",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "medium",
+          "synonyms": [
+            "regular"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "toppings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "mushrooms",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ham",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sausage",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "olivies",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-07-10"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "parent": "node_1_1532433056664",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1532433183677",
+      "previous_sibling": "slot_6_1532433193246"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1532433056664",
+      "metadata": {},
+      "variable": "$city_to",
+      "dialog_node": "slot_6_1532433193246",
+      "previous_sibling": "slot_3_1532433183689"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1532433056664",
+      "metadata": {},
+      "variable": "$city_from",
+      "dialog_node": "slot_3_1532433183689"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Ok, I understood you would like a $type_pizza Pizza but without <? $without_topping.join(', ') ?>."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1540459342849",
+      "metadata": {},
+      "conditions": "$without_topping",
+      "dialog_node": "node_7_1540459500003",
+      "previous_sibling": "node_8_1540459507615"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1540459342849",
+      "metadata": {},
+      "variable": "$toppings",
+      "dialog_node": "slot_9_1540460075522",
+      "previous_sibling": "slot_4_1540459465238"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1540459342849",
+      "metadata": {},
+      "variable": "$without_topping",
+      "dialog_node": "slot_12_1540460080080",
+      "previous_sibling": "slot_9_1540460075522"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Perfect, you will have your $type_pizza Pizza in 30 minutes."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1540459342849",
+      "metadata": {},
+      "dialog_node": "node_18_1540464482946",
+      "previous_sibling": "node_2_1540459401073"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Great choice so, a $type_pizza Pizza with <? $toppings.join(', ') ?>."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1540459342849",
+      "metadata": {},
+      "conditions": "$toppings",
+      "dialog_node": "node_2_1540459401073",
+      "previous_sibling": "node_7_1540459500003"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_1_1540459342849",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1540459465226",
+      "previous_sibling": "slot_12_1540460080080"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1540459342849",
+      "variable": "$type_pizza",
+      "dialog_node": "slot_4_1540459465238",
+      "previous_sibling": "node_18_1540464482946"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Ok, so to be clear, you would like a $type_pizza Pizza with <? $toppings.join(', ') ?> but without <? $without_topping.join(', ') ?>."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1540459342849",
+      "metadata": {},
+      "conditions": "$without_topping && $toppings",
+      "dialog_node": "node_8_1540459507615"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Oh you didn't specify the type of pizza you want..."
+      },
+      "parent": "slot_4_1540459465238",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1540459465238",
+      "previous_sibling": "handler_5_1540459465238"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1540459465238",
+      "context": {
+        "type_pizza": "@type_pizza"
+      },
+      "conditions": "@type_pizza",
+      "event_name": "input",
+      "dialog_node": "handler_5_1540459465238"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1540460075522",
+      "event_name": "focus",
+      "dialog_node": "handler_11_1540460075522",
+      "previous_sibling": "handler_10_1540460075522"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1540460075522",
+      "context": {
+        "toppings": "@toppings.values"
+      },
+      "metadata": {},
+      "conditions": "@toppings.values",
+      "event_name": "input",
+      "dialog_node": "handler_10_1540460075522"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Where do you want to go ?"
+      },
+      "parent": "slot_6_1532433193246",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_8_1532433193246",
+      "previous_sibling": "handler_7_1532433193246"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_6_1532433193246",
+      "context": {
+        "city_to": "@city_to"
+      },
+      "conditions": "@city_to",
+      "event_name": "input",
+      "dialog_node": "handler_7_1532433193246"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_12_1540460080080",
+      "event_name": "focus",
+      "dialog_node": "handler_14_1540460080080",
+      "previous_sibling": "handler_13_1540460080080"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_12_1540460080080",
+      "context": {
+        "without_topping": "@without_topping.values"
+      },
+      "metadata": {},
+      "conditions": "@without_topping.values",
+      "event_name": "input",
+      "dialog_node": "handler_13_1540460080080"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Where do you live ?"
+      },
+      "parent": "slot_3_1532433183689",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_5_1532433183689",
+      "previous_sibling": "handler_4_1532433183689"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_3_1532433183689",
+      "context": {
+        "city_from": "@city_from"
+      },
+      "conditions": "@city_from",
+      "event_name": "input",
+      "dialog_node": "handler_4_1532433183689"
+    },
+    {
+      "type": "frame",
+      "title": "Pizza Ordering",
+      "output": {},
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#order_pizza",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1540459342849",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1532433056664",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't understand. You can try rephrasing.",
+            "Can you reword your statement? I'm not understanding.",
+            "I didn't get your meaning."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1540459342849"
+    },
+    {
+      "type": "frame",
+      "title": "Travel Management",
+      "output": {
+        "text": {
+          "values": [
+            "If I correctly understood, you'd like to travel from $city_from to $city_to"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "conditions": "#travel",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1532433056664",
+      "digress_out": "allow_all",
+      "previous_sibling": "Welcome",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "text": {
+          "values": [
+            "Hello. How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "2f120301-89fb-486d-8a18-bc47d7e949f3",
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "status": "Training"
+}
