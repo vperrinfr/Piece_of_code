@@ -1,0 +1,218 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "RATP REST API",
+    "version": "4.0.2"
+  },
+  "servers": [
+    {
+      "url": "https://api-ratp.pierre-grimaud.fr/v4"
+    }
+  ],
+  "paths": {
+    "/lines/{type}/{code}": {
+      "get": {
+        "tags": [
+          "Lines"
+        ],
+        "description": "Get information about a specific line from the RATP network.",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "The type of transport (metros, rers, tramways, buses or noctiliens)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "metros",
+                "rers",
+                "tramways",
+                "buses",
+                "noctiliens"
+              ]
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of transport line",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/traffic/{type}/{code}": {
+      "get": {
+        "tags": [
+          "Traffic"
+        ],
+        "description": "Get traffic of a specific line from the RATP network.",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "The type of transport (metros, rers, tramways, buses or noctiliens)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "metros",
+                "rers",
+                "tramways",
+                "buses",
+                "noctiliens"
+              ]
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of transport line",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/schedules/{type}/{code}/{station}/{way}": {
+      "get": {
+        "tags": [
+          "Schedule"
+        ],
+        "description": "Get schedules at a specific station on a specific line.",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "The type of transport (metros, rers, tramways, buses or noctiliens)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "metros",
+                "rers",
+                "tramways",
+                "buses",
+                "noctiliens"
+              ]
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of transport line",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "station",
+            "in": "path",
+            "description": "Slug of the station name (e.g. bonne+nouvelle)",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "way",
+            "in": "path",
+            "description": "Way on the line",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "A",
+                "R",
+                "A+R"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "removeme": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
