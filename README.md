@@ -1,6 +1,10 @@
-# My IBM Cloud Functions for Watson Conversation
+# Piece of code for Watson Assistant
 
-A repository to store my IBM Cloud Functions
+A repository to store my pieces of code.
+
+## Watson Assistant Extension.
+
+  * Extension to retrieve France RATP API (OPENAPI 3.0) => [here](ratp.json)
 
 ## What is IBM Cloud Functions?
 
